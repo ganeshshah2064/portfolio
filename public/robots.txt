@@ -1,0 +1,12 @@
+# Allow all search engine bots to crawl the website
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ganeshsahu.com.np/sitemap.xml
+
+# Disallow crawling of admin and API routes
+Disallow: /admin/
+Disallow: /api/
+
+# Allow all other pages
