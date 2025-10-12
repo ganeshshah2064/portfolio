@@ -22,30 +22,32 @@ export function DevDesignShowcase() {
   }, []);
 
   return (
-    <div ref={ref} className="rounded-2xl border bg-card/60 backdrop-blur p-6 md:p-8">
-      <div className="flex items-center justify-between gap-6">
-        <IconPill>
-          <Database className="dev-icon size-6" />
-        </IconPill>
+    <div ref={ref} className="rounded-2xl border bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-lime-400/10 backdrop-blur p-4 sm:p-6 md:p-8">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
+        <div className="flex items-center justify-center gap-2 sm:gap-4 w-full sm:w-auto">
+          <IconPill>
+            <Database className="dev-icon size-5 sm:size-6" />
+          </IconPill>
 
-        <div className="h-px flex-1 bg-muted dev-line" />
+          <div className="h-px w-8 sm:w-12 bg-gradient-to-r from-blue-500/50 to-transparent dev-line" />
 
-        <IconPill highlight>
-          <Monitor className="dev-center size-6" />
-        </IconPill>
+          <IconPill highlight>
+            <Monitor className="dev-center size-5 sm:size-6" />
+          </IconPill>
 
-        <div className="h-px flex-1 bg-muted dev-line" />
+          <div className="h-px w-8 sm:w-12 bg-gradient-to-r from-transparent to-lime-400/50 dev-line" />
 
-        <IconPill>
-          <Paintbrush className="dev-icon size-6" />
-        </IconPill>
+          <IconPill>
+            <Paintbrush className="dev-icon size-5 sm:size-6" />
+          </IconPill>
+        </div>
       </div>
 
-      <div className="mt-6">
-        <h3 className="text-2xl font-semibold">
+      <div className="mt-4 sm:mt-6">
+        <h3 className="text-xl sm:text-2xl font-semibold">
           Dev & <span className="italic text-lime-400">Design</span>
         </h3>
-        <p className="mt-2 text-muted-foreground max-w-2xl">
+        <p className="mt-2 text-sm sm:text-base text-muted-foreground max-w-2xl">
           Excels in both development and design to create a seamless and intuitive user experience.
         </p>
       </div>
@@ -56,8 +58,8 @@ export function DevDesignShowcase() {
 function IconPill({ children, highlight = false }: { children: React.ReactNode; highlight?: boolean }) {
   return (
     <div
-      className={`grid place-items-center size-14 rounded-xl border ${
-        highlight ? "bg-lime-400/80 text-black" : "bg-muted/50"
+      className={`grid place-items-center size-10 sm:size-12 md:size-14 rounded-xl border ${
+        highlight ? "bg-gradient-to-br from-lime-400/90 to-lime-500/80 text-black shadow-lg shadow-lime-400/25" : "bg-gradient-to-br from-muted/60 to-muted/40"
       }`}
     >
       {children}

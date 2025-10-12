@@ -30,6 +30,8 @@ import TextRotate from "@/components/fancy/text-rotate";
 import { Button } from "@/components/ui/button";
 import MenuFab from "@/components/MenuFab";
 import Link from "next/link";
+import { DevDesignShowcase } from "@/components/DevDesignShowcase";
+import { EducationShowcase } from "@/components/EducationShowcase";
 
 // Import gallery images
 import img1 from "@/assets/img/1.png";
@@ -336,13 +338,13 @@ export default function Page() {
                   </svg>
                 </div>
                 <div className="pt-4">
-                  <h2 className="font-medium">Certain Things</h2>
-                  <p className="text-sm text-muted-foreground">Xeven</p>
+                  <h2 className="font-medium">Ganesh Shah</h2>
+                  <p className="text-sm text-muted-foreground">Developer</p>
                 </div>
                 <div className="relative ml-auto size-24 overflow-hidden rounded-lg">
                   <Image
-                    src="https://i.scdn.co/image/ab6761670000ecd4cd1b44b074cbf57946694e8b"
-                    alt="Album Cover"
+                    src={anish}
+                    alt="Ganesh Shah"
                     className="object-cover"
                     fill
                   />
@@ -353,26 +355,26 @@ export default function Page() {
 
           {/* Gallery Preview Section */}
           <Card className="col-span-full">
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-6">
+            <div className="p-4 sm:p-6">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="grid place-items-center size-12 rounded-xl bg-primary/10 border">
-                    <ImageIcon className="size-6 text-primary" />
+                  <div className="grid place-items-center size-10 sm:size-12 rounded-xl bg-primary/10 border">
+                    <ImageIcon className="size-5 sm:size-6 text-primary" />
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold">Image Gallery</h2>
-                    <p className="text-muted-foreground">A preview of my creative works</p>
+                    <h2 className="text-xl sm:text-2xl font-bold">Image Gallery</h2>
+                    <p className="text-sm sm:text-base text-muted-foreground">A preview of my creative works</p>
                   </div>
                 </div>
                 <Link href="/images">
-                  <Button className="flex items-center gap-2">
+                  <Button className="flex items-center gap-2 w-full sm:w-auto">
                     See More
                     <ArrowRight className="size-4" />
                   </Button>
                 </Link>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -418,6 +420,20 @@ export default function Page() {
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                 </motion.div>
               </div>
+            </div>
+          </Card>
+
+          {/* Dev & Design Showcase */}
+          <Card className="col-span-full">
+            <div className="p-4">
+              <DevDesignShowcase />
+            </div>
+          </Card>
+
+          {/* Education Showcase */}
+          <Card className="col-span-full">
+            <div className="p-4">
+              <EducationShowcase />
             </div>
           </Card>
         </motion.div>

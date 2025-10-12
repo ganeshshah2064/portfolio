@@ -8,6 +8,21 @@ import Clarity from "@/components/Clarity";
 export const metadata: Metadata = {
   title: "Ganesh Shah | Portfolio | Developer from Ithari, Nepal",
   description: "Personal portfolio of Ganesh Shah, a passionate developer from Ithari, Nepal. Explore my projects, skills, and experience in software development.",
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png' }
+    ],
+    other: [
+      { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#000000' }
+    ]
+  },
+  manifest: '/site.webmanifest',
+  themeColor: '#000000',
   keywords: [
     "Ganesh Shah",
     "Ganesh Shah Ithari",

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Coffee, Info, FolderGit2, Menu, X, Image, Award, Settings } from "lucide-react";
+import { Coffee, Info, FolderGit2, Menu, X, Image, Award, Settings, Home } from "lucide-react";
 import Link from "next/link";
 
 export default function MenuFab() {
@@ -21,6 +21,7 @@ export default function MenuFab() {
             className="mb-3 rounded-2xl border bg-background/90 backdrop-blur p-2 shadow-xl"
           >
             <nav className="flex flex-col gap-1 min-w-48">
+              <MenuItem href="/" icon={<Home className="size-4" />} label="Home" />
               <MenuItem href="/about" icon={<Info className="size-4" />} label="About" />
               <MenuItem href="/projects" icon={<FolderGit2 className="size-4" />} label="Projects" />
               <MenuItem href="/certifications" icon={<Award className="size-4" />} label="Certifications" />
